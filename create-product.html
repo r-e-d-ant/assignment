@@ -3,111 +3,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="/assets/styles/create-product.css">
     <title>Create product</title>
 </head>
 <body>
     <!-- Header -->
     <header id="header">
-        <div class="logo">ABC <em>ltd</em></div>
+        <nav class="navbar container">
+            <div class="logo">ABC <em>ltd</em></div>
 
-        <nav class="navbar">
             <ul class="nav-list">
                 <li class="nav-item"><a href="index.html" class="nav-link">Product List</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Create product</a></li>
+                <li class="nav-item"><a href="create-product.html" class="nav-link">Create product</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main">
-        <div class="category-info">
-            <h2 class="categ-title section-title">Product information</h3>
-        </div>
-        <div class="line-divider"></div>
-
-        <section>
-            <form class="create-product-form">
-                <fieldset>
-                    <div class="form-control">
-                        <label for="name" class="label">Name</label>
-                        <input type="text" id="name" class="normal-input">
-                    </div>
-
-                    <div class="form-subs-container">
-                        <div class="form-sub">
-                            <label for="name" class="label">Code</label>
+        <section class="create-container">
+            <div class="category-info">
+                <h2 class="categ-title section-title">Create a new product</h3>
+            </div>
+            <div class="line-divider"></div>
+    
+            <section>
+                <form class="create-product-form">
+                    <fieldset>
+                        <div class="form-control">
+                            <label for="name" class="label">Name</label>
                             <input type="text" id="name" class="normal-input">
                         </div>
-                        <div class="form-sub">
-                            <label for="name" class="label">Quantity at hand</label>
-                            <input type="number" id="name" class="normal-input">
+                        <div class="form-control">
+                            <label for="product-category" class="label">Product Category</label>
+                            <select id="product-category" class="normal-input">
+                                <option value="">Select category</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="furnitures">Furnitures</option>
+                                <option value="clothes">Clothes</option>
+                                <option value="beauty">Beauty</option>
+                            </select>
                         </div>
-                        <div class="form-sub">
-                            <label for="name" class="label">Unit Price</label>
-                            <input type="number" id="name" class="normal-input">
+    
+                        <div class="form-subs-container">
+                            <div class="form-sub">
+                                <label for="code" class="label">Code</label>
+                                <input type="text" id="code" class="normal-input">
+                            </div>
+                            <div class="form-sub">
+                                <label for="qty" class="label">Quantity at hand</label>
+                                <input type="number" id="qty" class="normal-input">
+                            </div>
+                            <div class="form-sub">
+                                <label for="unit-price" class="label">Unit Price</label>
+                                <input type="number" id="unit-price" class="normal-input">
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="form-subs-container">
-                        <div class="form-sub">
-                            <label for="name" class="label">Manufactured date</label>
-                            <input type="date" id="name" class="normal-input">
+    
+                        <div class="form-subs-container el-two">
+                            <div class="form-sub">
+                                <label for="manufact-date" class="label">Manufactured date</label>
+                                <input type="date" id="manufact-date" class="normal-input">
+                            </div>
+                            <div class="form-sub">
+                                <label for="exp-date" class="label">Expiry date</label>
+                                <input type="date" id="exp-date" class="normal-input">
+                            </div>
                         </div>
-                        <div class="form-sub">
-                            <label for="name" class="label">Expiry date</label>
-                            <input type="date" id="name" class="normal-input">
+    
+                        <div class="form-control file-form-control">
+                            <label for="image-upload" class="label file-label">
+                                <span>Image</span>
+                                <div class="img-input">
+                                    <span id="file-name" class="file-box">Select an image</span>
+                                </div>
+                            </label>
+                            <input type="file" id="image-upload" class="normal-input file-input" onchange="uploadFile(this)">
                         </div>
-                    </div>
-
-                    <div class="form-control">
-                        <label for="name" class="label">Image</label>
-                        <input type="file" id="name" class="normal-input">
-                    </div>
-
-                    <div class="form-control">
-                        <label for="name" class="label">Description</label>
-                        <textarea name="name" id="name" cols="30" rows="10" class="txt-area-input"></textarea>
-                    </div>
-
-                    <button type="submit" class="btn create-btn">Create</button>
-                </fieldset>
-            </form>
+    
+                        <div class="form-control">
+                            <label for="text" class="label">Description</label>
+                            <textarea name="name" id="text" cols="30" rows="10" class="txt-area-input"></textarea>
+                        </div>
+    
+                        <button type="submit" class="btn create-btn">Create</button>
+                    </fieldset>
+                </form>
+            </section>
         </section>
     </main>
 
     <!-- footer -->
     <footer id="footer">
-        <div class="footer-logo"></div>
+        <div class="container">
+            <div class="footer-logo">ABC <em>ltd</em></div>
 
-        <div class="footer-infos-container">
-            <div class="social-links-container">
-                <h3 class="footer-info-title">Follow us</h3>
+            <div class="footer-infos-container">
+                <div class="social-links-container">
+                    <h3 class="footer-info-title">Follow us</h3>
 
-                <div class="social-links">
-                    <i class="bx bx-facebook"></i>
-                    <i class="bx bx-instagram"></i>
-                    <i class="bx bx-linkedin"></i>
-                    <i class="bx bx-twitter"></i>
+                    <div class="social-links">
+                        <i class='bx bxl-facebook-square'></i>
+                        <i class='bx bxl-instagram'></i>
+                        <i class='bx bxl-linkedin-square'></i>
+                        <i class='bx bxl-twitter' ></i>
+                    </div>
+                </div>
+
+                <div class="address-info-container">
+                    <h3 class="footer-info-title">Address</h3>
+                    <h4 class="address-desc">Kigali, Gasabo, Rwanda</h4>
+                </div>
+
+                <div class="address-info-container">
+                    <h3 class="footer-info-title">Phone and Email</h3>
+                    <h4 class="address-desc">+250700000069, abc@domain.com</h4>
                 </div>
             </div>
 
-            <div class="address-info-container">
-                <h3 class="footer-info-title">Address</h3>
-                <h4 class="address-desc">Kigali, Gasabo, Rwanda</h4>
+            <div class="line-divider"></div>
+
+            <div class="developers-copyright">
+                <h5 class="developer-desc">Designed and Developed by group 8 members</h5>
+
+                <h6 class="copyright">abc ltd © 2022</h6>
             </div>
-
-            <div class="address-info-container">
-                <h3 class="footer-info-title">Phone and Email</h3>
-                <h4 class="address-desc">+250700000069, abc@domain.com</h4>
-            </div>
-        </div>
-
-        <div class="line-divider"></div>
-
-        <div class="developers-copyright">
-            <h5 class="developer-desc">Designed and Developed by group 8 members</h5>
-
-            <h6 class="copyright">abc ltd © 2022</h6>
         </div>
     </footer>
+
+    <script>
+    function uploadFile(target) {
+        document.getElementById("file-name").innerHTML = target.files[0].name;
+    }
+    </script>
 </body>
 </html>

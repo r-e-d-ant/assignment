@@ -1,0 +1,112 @@
+/* -- global -- */
+.create-container {
+    margin: 2rem 1rem;
+}
+@media screen and (min-width: 618px) {
+    .create-container {
+        margin: 2rem 8rem;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .create-container {
+        margin: 2rem 20rem;
+    }
+}
+@media screen and (min-width: 1920px) {
+    .create-container {
+        margin: 2rem 30rem;
+    }
+}
+
+/* ---- */
+.create-product-form fieldset {
+    padding: 1rem;
+    border-radius: 5px;
+    border: thin solid var(--input-border-clr);
+}
+.form-control, .form-sub {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+.label {
+    color: var(--primary-clr-alt);
+    margin-bottom: .5rem;
+}
+.normal-input {
+    width: 100%;
+    height: 45px;
+    padding: 0 1rem;
+    font-size: 1rem;
+    outline: none;
+    color: var(--primary-clr-alt);
+    border: thin solid var(--input-border-clr);
+    border-radius: 5px;
+}
+.normal-input:focus {
+    box-shadow: 0 0 5px var(--input-border-clr);
+}
+.file-form-control {
+    position: relative;
+}
+#image-upload {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+.file-label {
+    width: 100%;
+}
+.file-label .img-input {
+    cursor: pointer;
+    margin-top: .5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: thin solid var(--input-border-clr);
+}
+.form-subs-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+}
+.el-two {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+}
+.txt-area-input {
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: var(--primary-clr-alt);
+    padding: .5rem 1rem;
+    border: thin solid var(--input-border-clr);
+    border-radius: 5px;
+}
+.txt-area-input:focus {
+    box-shadow: 0 0 5px var(--input-border-clr);
+}
+.create-btn {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+@media screen and (min-width: 516px) {
+    .create-btn {
+        width: 30%;
+    }
+    .form-subs-container {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    }
+    .el-two {
+        grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    }
+}
