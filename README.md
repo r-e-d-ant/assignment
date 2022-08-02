@@ -1,9 +1,8 @@
-# assignment
-group 8 web design assignment
+# Assignment
+## Group 8 web design assignment
 
-* Group Members
-# --------------
-```
+## Group Members
+
 <ul>
     <li>24108 - Bah Isatou M</li>
     <li>24300 - Thierry Mugisha</li>
@@ -16,4 +15,3 @@ group 8 web design assignment
     <li>23543 - Ishimwe Yvan</li>
     <li>23456 - Rukundo Justin</li>
 </ul>
-```
